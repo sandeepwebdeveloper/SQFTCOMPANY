@@ -1,0 +1,19 @@
+@import './base/_fonts';
+@import url("https://use.typekit.net/cfy8bik.css");
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'lity/dist/lity';
+@import './base/_variables';
+@import './base/_animations';
+@import './base/_mixins';
+@import './base/_global';
+@import 'aos/dist/aos.css';
+@import 'swiper/swiper-bundle.css';
+@import 'SimpleLightbox/dist/simple-lightbox';
+@import 'modules/_header';
+@import 'modules/_content-area';
+@import 'modules/_broker-portal';
+@import 'modules/_floorplans';
+@import 'modules/_footer';
+
+/* @import 'magnific-popup';
+*/

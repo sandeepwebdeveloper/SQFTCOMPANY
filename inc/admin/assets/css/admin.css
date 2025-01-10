@@ -1,0 +1,216 @@
+/**
+ * Custom style to be loaded in themes option
+ * @since 1.0.0
+ * @author: Sohrab
+ */
+.acf-fields.-sidebar.-left:before {
+    background: #202020 !important;
+    border-color: #202020 !important;
+}
+
+.acf-fields.-sidebar.-left .acf-tab-wrap.-left .acf-tab-group li a {
+    border-color: #202020 !important;
+    color: #ffffff !important;
+    text-align: center;
+}
+
+.acf-fields.-left > .acf-field:before {
+    background: #313131 !important;
+    border-color: #313131;
+}
+
+.acf-fields.-sidebar.-left .acf-tab-wrap.-left .acf-tab-group li.active a {
+    background: #313131 !important;
+    color: #ffffff !important;
+    text-align: center;
+}
+
+.acf-fields.-sidebar > .acf-tab-wrap.-left .acf-tab-group li a {
+    color: #222222 !important;
+}
+
+.acf-fields.-sidebar > .acf-tab-wrap.-left .acf-tab-group li a:hover {
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+.acf-fields > .acf-field {
+    border-top: none !important;
+}
+
+.acf-field .acf-label label {
+    color: #999999 !important;
+}
+
+.fa-2x {
+    text-align: center;
+    display: block;
+}
+
+.acf-fields.-sidebar.-left:before {
+    width: 80px !important;
+}
+
+.meta-box-sortables .acf-fields.-sidebar.-left {
+    padding: 0 0 0 80px !important;
+    overflow: hidden;
+}
+
+.acf-fields.-sidebar.-left .acf-tab-wrap.-left .acf-tab-group {
+    width: 80px !important;
+}
+
+.acf-fields.-left > .acf-field:before {
+    border: none !important;
+}
+
+.toplevel_page_theme-general-settings .inside.acf-fields {
+    min-height: 600px !important;
+}
+
+.toplevel_page_theme-general-settings .acf-field-social-networks {
+    min-height: 350px !important;
+}
+
+.acf-fields.-left > .acf-field {
+    background: #ffffff !important;
+    border-bottom: none;
+}
+
+.acf-fields.-sidebar > .acf-tab-wrap.-left .acf-tab-group li a {
+    font-size: 11px !important;
+}
+
+.acf-field-social-networks .acf-label a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.acf-field-social-networks code, kbd {
+    background: transparent !important;
+}
+
+/* fix the post option issues */
+.post-type-post .inside.acf-fields {
+    min-height: 100px !important;
+}
+
+/* fix the page option issues */
+.post-type-page .acf-field-page-body-class {
+    min-height: 200px !important;
+}
+
+.acf-field.acf-field-checkbox.acf-field-ms-theme-libraries {
+    min-height: 600px;
+}
+
+.acf-field-map-api-key .acf-label a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.acf-field.acf-field-text.acf-field-google-captcha-secret-key {
+    padding-bottom: 300px;
+}
+
+.acf-field-options-captcha .acf-label a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.toplevel_page_theme-general-settings .settings-icon,
+#acf-group_page_options .settings-icon {
+    width: 30px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 0 auto;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+.toplevel_page_theme-general-settings .icon-header,
+#acf-group_page_options .icon-header {
+    -webkit-mask: url(../images/icon-header.svg) no-repeat 50% 50%;
+    mask: url(../images/icon-header.svg) no-repeat 50% 50%;
+    background-color: #bababa;
+}
+
+.toplevel_page_theme-general-settings .icon-footer,
+#acf-group_page_options .icon-footer {
+    -webkit-mask: url(../images/icon-footer.svg) no-repeat 50% 50%;
+    mask: url(../images/icon-footer.svg) no-repeat 50% 50%;
+    background-color: #bababa;
+}
+
+.toplevel_page_theme-general-settings .icon-map {
+    -webkit-mask: url(../images/icon-map.svg) no-repeat 50% 50%;
+    mask: url(../images/icon-map.svg) no-repeat 50% 50%;
+    background-color: #bababa;
+}
+
+.toplevel_page_theme-general-settings .icon-analytics {
+    -webkit-mask: url(../images/icon-analytics.svg) no-repeat 50% 50%;
+    mask: url(../images/icon-analytics.svg) no-repeat 50% 50%;
+    background-color: #bababa;
+}
+
+.toplevel_page_theme-general-settings .icon-social {
+    -webkit-mask: url(../images/icon-social.svg) no-repeat 50% 50%;
+    mask: url(../images/icon-social.svg) no-repeat 50% 50%;
+    background-color: #bababa;
+}
+
+.toplevel_page_theme-general-settings .icon-code {
+    -webkit-mask: url(../images/icon-code.svg) no-repeat 50% 50%;
+    mask: url(../images/icon-code.svg) no-repeat 50% 50%;
+    background-color: #bababa;
+}
+
+.toplevel_page_theme-general-settings .icon-library {
+    -webkit-mask: url(../images/icon-library.svg) no-repeat 50% 50%;
+    mask: url(../images/icon-library.svg) no-repeat 50% 50%;
+    background-color: #bababa;
+}
+
+.toplevel_page_theme-general-settings .icon-container,
+#acf-group_page_options .icon-container {
+    -webkit-mask: url(../images/icon-container.svg) no-repeat 50% 50%;
+    mask: url(../images/icon-container.svg) no-repeat 50% 50%;
+    background-color: #bababa;
+}
+
+.toplevel_page_theme-general-settings .acf-tab-group .active .settings-icon,
+#acf-group_page_options .acf-tab-group .active .settings-icon {
+    background-color: #FFD700;
+}
+
+.toplevel_page_theme-general-settings .acf-fields.-sidebar.-left .acf-tab-wrap.-left .acf-tab-group li a,
+#acf-group_page_options .acf-fields.-sidebar.-left .acf-tab-wrap.-left .acf-tab-group li a {
+    color: #bababa !important;
+}
+
+.toplevel_page_theme-general-settings .acf-fields.-sidebar.-left .acf-tab-wrap.-left .acf-tab-group li.active a,
+#acf-group_page_options .acf-fields.-sidebar.-left .acf-tab-wrap.-left .acf-tab-group li.active a {
+    color: #ffffff !important;
+}
+
+.toplevel_page_theme-general-settings .acf-fields.-left > .acf-field:before {
+    border: none !important;
+    height: 800px;
+}
+
+.toplevel_page_theme-general-settings .acf-fields.-left > .acf-field:before {
+    background: #313131 !important;
+    border-color: #313131;
+}
+.toplevel_page_theme-general-settings #acf-group_msteel_theme_options h2.hndle.ui-sortable-handle {
+    display: none !important;
+}
+
+.toplevel_page_theme-general-settings #acf-group_msteel_theme_options .handlediv {
+    display: none !important;
+}
+.toplevel_page_theme-general-settings .acf-field-enable-tracking{
+    display: none !important;
+}

@@ -1,0 +1,90 @@
+.site-header {
+    background: $red;
+    padding: 15px 0;
+    .menu-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        img {
+            width: 140px;
+        }
+    }
+    button.menu-btn-wrap {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background: transparent;
+        border: 2px solid #ffffff;
+        position: relative;
+        z-index: 111;
+        &--open {
+            span.menu-btn-bar {
+                top: 23px !important;
+                transform: rotate(45deg);
+                transform-origin: center;
+                &:nth-child(2) {
+                    opacity: 0;
+                    visibility: hidden;
+                    height: 0;
+                }
+                &:nth-child(3) {
+                    top: 23px !important;
+                    transform: rotate(-45deg);
+                    transform-origin: center;
+                }
+            }
+        }
+        span.menu-btn-bar {
+            width: 30px;
+            height: 2px;
+            background: $white;
+            position: absolute;
+            top: 13px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: all .4s ease-in-out;
+            &:nth-child(2) {
+                top: 22.5px;
+            }
+            &:nth-child(3) {
+                top: 32px;
+            }
+        }
+    }
+    .open-menu-block {
+        position: fixed;
+        background: $red;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        .menu-block-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            ul {
+                padding: 0;
+                li {
+                    list-style: none;
+                    margin-bottom: 25px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    a {
+                        color: $white;
+                        color: $white;
+                        text-decoration: none;
+                        font-size: 45px;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+}

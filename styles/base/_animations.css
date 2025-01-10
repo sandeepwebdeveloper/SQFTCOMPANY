@@ -1,0 +1,29 @@
+@keyframes bounce-1 {
+    0% {
+        transform: translateY(15px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveSlideshow {
+    0% {
+        transform: translatex(-50px) translatey(50px);
+    }
+    100% {
+        transform: translatex(50px) translatey(-50px);
+    }
+}
+
+@keyframes moveSlideshowDown {
+    0% {
+        transform: translatex(50px) translatey(-50px);
+    }
+    100% {
+        transform: translatex(-50px) translatey(50px);
+    }
+}

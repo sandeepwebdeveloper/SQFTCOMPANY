@@ -1,0 +1,4 @@
+[09-Nov-2024 17:01:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/tkmreute/public_html/wp-content/themes/sqft-theme/404.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/tkmreute/public_html/wp-content/themes/sqft-theme/404.php on line 12
