@@ -296,6 +296,23 @@ template {
 [hidden] {
     display: none;
 }
+.bg-light-grey {
+    @mixin atELarge {
+        background: #f8f8f8;
+    }
+}
+a.wp-block-button__link.has-text-align-center.wp-element-button {
+    background: $red;
+    border-radius: 0;
+    padding: 15px 60px;
+    border: 2px solid $red;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background: $white;
+        border-color: $red;
+        color: $red;
+    }
+}
 
 .px {
     &-120 {

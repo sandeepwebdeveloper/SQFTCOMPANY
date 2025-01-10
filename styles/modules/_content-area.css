@@ -312,16 +312,16 @@ section {
         }
     }
     &__project-gallery {
-        padding: 80px 0;
-        margin-bottom: 80px;
+        margin-top: 60px;
+        margin-bottom: 60x;
         @mixin atELarge {
-            padding: 0px 0;
+            margin-top: 120px;
             margin-bottom: 120px;
         }
     }
     &__site-register {
         padding: 80px 0;
-        background: #efefef;
+        background: #f8f8f8;
         @mixin atELarge {
             padding: 120px 0;
         }
@@ -330,6 +330,7 @@ section {
                 span {
                     display: block;
                     color: $black;
+                    letter-spacing: 0;
                 }
             }
         }
@@ -396,17 +397,25 @@ section {
         }
         .form-disclaimer {
             p {
-                max-width: 50%;
                 margin: 0 auto 50px;
                 text-align: center;
                 font-size: 12px;
+                @mixin atELarge {
+                    max-width: 50%;
+                }
             }
         }
+    }
+    &__thank-you {
+        padding: 120px 0;
     }
 }
 
 .single-project-page {
-    padding: 120px 0 0;
+    padding: 60px 0 0;
+    @mixin atELarge {
+        padding: 120px 0 0;
+    }
     .single-project-logo {
         img {
             width: 120px;
@@ -422,11 +431,21 @@ section {
             font-weight: 300;
         }
     }
-    .sigle-banner-title {
-        h1 {
-            font-size: 46px;
+
+    .single-header-wrap {
+        @mixin atELarge {
+            padding-left: 60px;
+        }
+        @mixin atXlLarge {
+            padding-left: 120px;
+        }
+        .sigle-banner-title {
+            h1 {
+                font-size: 46px;
+            }
         }
     }
+
     .single-project-banner {
         .single-banner-image {
             height: 450px;

@@ -163,7 +163,7 @@ if ( ! class_exists( 'msteele_actions' ) ):
                             <a href="mailto:tarun@sqftcompany.com">tarun@sqftcompany.com</a>
                         </span>
                         <span class="text-phone">
-                            <a href="mailto:6475701134">6475701134</a>
+                            <a href="mailto:4374539555">437-453-9555</a>
                         </span>
 
                     </div>
