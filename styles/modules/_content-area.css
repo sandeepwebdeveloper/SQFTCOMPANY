@@ -467,17 +467,19 @@ section {
     @mixin atELarge {
         padding: 120px 0 0;
     }
-    .register-action.mt-5 {
-        position: fixed;
-        bottom: 0;
-        z-index: 1;
-        left: 0;
-        right: 0;
-        width: 100%;
-        a.btn.btn-primary {
+    @media (max-width: 768px) {
+        .register-action {
+            position: fixed;
+            bottom: 0;
+            z-index: 1;
+            left: 0;
+            right: 0;
             width: 100%;
-            font-size: 12px;
-            letter-spacing: 2px;
+            a.btn.btn-primary {
+                width: 100%;
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
         }
     }
     .single-project-logo {
