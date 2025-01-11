@@ -5,16 +5,20 @@ section {
 .content-section {
     &__home-banner {
         position: relative;
-        height: 100vh;
         overflow: hidden;
+        @mixin atELarge {
+            height: 100vh;
+        }
         .slide-heading {
             h1 {
                 overflow: hidden; /* Clip effect to hide content initially */
                 display: inline-block;
                 span {
                     display: block;
-                    height: 130px; /* Adjust the height to fit the text */
                     overflow: hidden; /* Ensure animation stays within the container */
+                    @mixin atELarge {
+                        height: 130px; /* Adjust the height to fit the text */
+                    }
                     strong {
                         display: block;
                         transform: translateY(
@@ -32,17 +36,23 @@ section {
 
         .parallax-image {
             width: 100%;
-            height: 120%; /* Extra height for the parallax effect */
+            height: 100%; /* Extra height for the parallax effect */
             object-fit: cover; /* Ensure the image scales properly */
             transform-origin: center center; /* Smooth scaling and movement */
+            @mixin atELarge {
+                height: 120%; /* Extra height for the parallax effect */
+            }
+            @media (max-width: 1200px) {
+                transform: translate(0%, 0%) !important;
+            }
         }
 
         .slider-img {
             img {
                 height: 650px;
                 object-fit: cover;
-                object-position: -680px;
                 @mixin atELarge {
+                    object-position: -680px;
                     object-position: center;
                     height: auto !important;
                 }
@@ -126,7 +136,7 @@ section {
                         height: 300px;
                     }
                     @mixin atXlLarge {
-                        height: 450px;
+                        height: 550px;
                     }
                 }
             }
@@ -147,12 +157,13 @@ section {
                 h3 {
                     font-size: 1.2em;
                     letter-spacing: 0.5px;
-                    font-weight: 500;
+                    font-weight: 700;
                     margin-bottom: 0;
                 }
             }
             &-price {
-                margin-bottom: 40px;
+                margin-bottom: 25px;
+                margin-top: 15px;
                 span {
                     font-weight: 700;
                     color: $red;
@@ -179,10 +190,19 @@ section {
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
+                    transition: all 0.3s ease-in-out;
                     span {
                         margin-left: 10px;
+                        transition: all 0.3s ease-in-out;
+
                         img {
                             width: 60px;
+                        }
+                    }
+                    &:hover {
+                        letter-spacing: 2px;
+                        span {
+                            margin-left: 20px;
                         }
                     }
                 }
@@ -217,6 +237,7 @@ section {
                 flex-wrap: wrap;
                 list-style: none;
                 padding-left: 0;
+                margin-bottom: 0;
                 @mixin atELarge {
                     justify-content: flex-start;
                 }
@@ -224,13 +245,16 @@ section {
                     color: $white;
                     flex: 0 0 auto;
                     width: 50%;
-                    font-size: 18px;
                     font-weight: 100;
                     display: flex;
                     align-items: center;
                     letter-spacing: 1px;
                     margin-bottom: 10px;
+                    @mixin atMedium {
+                        width: 33.33%;
+                    }
                     @mixin atELarge {
+                        font-size: 18px;
                         width: 20%;
                         margin-bottom: 5px;
                         font-size: 18px;
@@ -243,13 +267,13 @@ section {
                     span {
                         width: 30px;
                         text-align: right;
-                        height: 50px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         margin-right: 0px;
                         @mixin atELarge {
                             width: 50px;
+                            height: 50px;
                         }
                     }
                 }
@@ -265,12 +289,16 @@ section {
             &--wrap {
                 background: #ededed;
                 padding: 35px;
-                height: 310px;
-                margin-bottom: 60px;
+                margin-bottom: 25px;
                 display: flex;
                 justify-content: flex-start;
                 flex-direction: column;
+                @mixin atMedium {
+                    height: 250px;
+                }
                 @mixin atELarge {
+                    height: 310px;
+                    margin-bottom: 60px;
                     padding: 25px;
                 }
                 @mixin atXlLarge {
@@ -279,14 +307,15 @@ section {
             }
             &--title {
                 h3 {
-                    margin-bottom: 45px;
-                    font-size: 20px;
+                    margin-bottom: 25px;
+                    font-size: 16px;
                     text-transform: uppercase;
                     font-weight: 700;
                     letter-spacing: 1px;
-                    height: 40px;
                     @mixin atELarge {
+                        margin-bottom: 45px;
                         font-size: 14px;
+                        height: 40px;
                     }
                     @mixin atXlLarge {
                         font-size: 20px;
@@ -296,10 +325,11 @@ section {
             &--text {
                 p {
                     margin-bottom: 0;
-                    line-height: 30px;
+                    line-height: 20px;
                     letter-spacing: 0.5px;
-                    font-size: 16px;
+                    font-size: 14px;
                     @mixin atELarge {
+                        font-size: 16px;
                         line-height: 24px;
                         font-size: 14px;
                     }
@@ -327,10 +357,31 @@ section {
         }
         .section-heading {
             h3 {
+                font-size: 20px;
+                letter-spacing: 1px;
+                font-weight: 300;
+                text-transform: capitalize;
+                @mixin atELarge {
+                    font-size: 35px;
+                    letter-spacing: auto;
+                }
+                @mixin atELarge {
+                    font-size: 28px;
+                }
+                @mixin atXlLarge {
+                    font-size: 35px;
+                }
                 span {
                     display: block;
                     color: $black;
                     letter-spacing: 0;
+                    font-size: 24px;
+                    @mixin atELarge {
+                        font-size: 42px;
+                    }
+                    @mixin atXlLarge {
+                        font-size: 66px;
+                    }
                 }
             }
         }
@@ -416,6 +467,19 @@ section {
     @mixin atELarge {
         padding: 120px 0 0;
     }
+    .register-action.mt-5 {
+        position: fixed;
+        bottom: 0;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        width: 100%;
+        a.btn.btn-primary {
+            width: 100%;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+    }
     .single-project-logo {
         img {
             width: 120px;
@@ -429,9 +493,28 @@ section {
             font-size: 16px;
             line-height: 1.8;
             font-weight: 300;
+            @mixin atELarge {
+                font-size: 18px;
+            }
         }
     }
-
+    .sigle-banner-title {
+        h1 {
+            font-size: 5.5vw;
+            @mixin atELarge {
+                font-size: 4vw;
+            }
+            span {
+                font-size: 3.5vw;
+                display: block;
+                margin-top: 10px;
+                color: #b6b6b6;
+                @mixin atELarge {
+                    font-size: 1.5vw;
+                }
+            }
+        }
+    }
     .single-header-wrap {
         @mixin atELarge {
             padding-left: 60px;
@@ -439,18 +522,13 @@ section {
         @mixin atXlLarge {
             padding-left: 120px;
         }
-        .sigle-banner-title {
-            h1 {
-                font-size: 46px;
-            }
-        }
     }
 
     .single-project-banner {
         .single-banner-image {
             height: 450px;
             overflow: hidden;
-            margin-top: 60px;
+            margin-top: 30px;
             @mixin atELarge {
                 margin-top: 0;
                 height: 850px;

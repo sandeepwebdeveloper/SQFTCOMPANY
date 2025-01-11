@@ -40,6 +40,7 @@
         </div>
     </div>
     <div class="slide-action">
+        <span class="scroll-text">scroll down</span>
         <span class="hscroll-line"></span>
     </div>
     <?php /*
@@ -85,8 +86,11 @@
                             // Fetch the status category (assuming the taxonomy is 'status')
                             $status_terms = get_the_terms(get_the_ID(), 'property-status');
                             $status = $status_terms && !is_wp_error($status_terms) ? $status_terms[0]->name : 'Status not available';
+                            // Fetch the city category (assuming the taxonomy is 'city')
+                            $city_terms = get_the_terms(get_the_ID(), 'city');
+                            $city = $city_terms && !is_wp_error($city_terms) ? $city_terms[0]->name : 'City not specified';
                             ?>
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-xl-3">
                         <div class="project-block-grid">
                             <div class="project-block-wrap">
                                 <div class="project-block-img">
@@ -188,7 +192,7 @@
             if ($services_query->have_posts()) : ?>
         <div class="row">
             <?php while ($services_query->have_posts()) : $services_query->the_post(); ?>
-            <div class="col-md-3">
+            <div class="col-md-6 col-xl-3">
                 <div class="services-block">
                     <div class="services-block--wrap">
                         <div class="services-block--title">

@@ -296,6 +296,15 @@ template {
 [hidden] {
     display: none;
 }
+.btn.btn-primary {
+    background: $red;
+    border: 1px solid $red;
+    border-radius: 0;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
 .bg-light-grey {
     @mixin atELarge {
         background: #f8f8f8;
@@ -348,7 +357,10 @@ a.wp-block-button__link.has-text-align-center.wp-element-button {
 }
 
 .section-heading {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    @mixin atELarge {
+        margin-bottom: 80px;
+    }
     &--white {
         h3,
         span {
@@ -524,15 +536,40 @@ button#load-more-btn {
 .property-cat-img:hover .image-overlay {
     opacity: 1;
 }
-
+.slide-action {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 150px;
+    @mixin atELarge {
+        height: 280px;
+    }
+    span.scroll-text {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        bottom: 0;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
 .hscroll-line {
     bottom: 0;
     right: 50%;
-    height: 250px;
+    height: 120px;
     position: absolute;
     overflow: hidden;
     width: 2px;
-    z-index: 11;
+    z-index: 1;
+    @mixin atELarge {
+        height: 250px;
+    }
     &:before,
     &:after {
         position: absolute;
@@ -556,8 +593,8 @@ button#load-more-btn {
     0% {
         transform: translate3d(0, -100%, 0);
     }
-    60% {
-        transform: translate3d(0, 100%, 0);
+    50% {
+        transform: translate3d(0, 0%, 0);
     }
     100% {
         transform: translate3d(0, 100%, 0);
@@ -566,15 +603,22 @@ button#load-more-btn {
 .formcode {
     label {
         margin-bottom: 10px;
-        font-size: 16px;
+        font-size: 14px;
         letter-spacing: 0.8px;
+        @mixin atELarge {
+            font-size: 16px;
+        }
     }
     input,
     select {
         border-radius: 0;
-        padding: 10px 5px;
-        margin-bottom: 30px;
-        border: 1px solid #000000;
-        background: #ffffff;
+        padding: 7px 5px;
+        margin-bottom: 20px;
+        border: 1px solid $black;
+        background: $white;
+        @mixin atELarge {
+            padding: 10px 5px;
+            margin-bottom: 30px;
+        }
     }
 }

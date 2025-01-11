@@ -176,7 +176,7 @@ function create_property_taxonomies() {
         'show_in_rest'      => true,
     );
 
-    register_taxonomy( 'bedroom', array( 'property' ), $args );
+    register_taxonomy( 'cities', array( 'property' ), $args );
 
     // Property Type taxonomy
     $labels = array(
