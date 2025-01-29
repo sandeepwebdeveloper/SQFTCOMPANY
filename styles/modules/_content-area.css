@@ -418,11 +418,11 @@ section {
                     background: transparent;
                     box-shadow: none;
                     border: 1px solid $white;
-                    color: #ffffff;
+                    color: $black;
                     outline: 0;
                     margin-bottom: 30px;
                     &::placeholder {
-                        color: $white;
+                        color: $black;
                         opacity: 0;
                     }
                 }
