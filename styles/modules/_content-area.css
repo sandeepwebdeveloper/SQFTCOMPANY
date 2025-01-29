@@ -546,6 +546,9 @@ section {
             margin-top: 15px;
             margin-bottom: 0;
             @mixin atMedium {
+                font-size: 1.2rem;
+            }
+            @mixin atXlLarge {
                 font-size: 1.5rem;
             }
             p {

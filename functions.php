@@ -50,8 +50,8 @@ function twentynineteen_scripts() {
 	} else {
 
 		wp_enqueue_script('Theme-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.10841bad64a513441c6f.js') , NULL , '1.0', true);
-		wp_enqueue_script('uce-Scripts', get_theme_file_uri('/bundled-assets/scripts.59da8f18563b0f944e58.js') , NULL , '1.0', true);
-		wp_enqueue_style('uce-Styles', get_theme_file_uri('/bundled-assets/styles.59da8f18563b0f944e58.css'));
+		wp_enqueue_script('uce-Scripts', get_theme_file_uri('/bundled-assets/scripts.530be9de032294d506a9.js') , NULL , '1.0', true);
+		wp_enqueue_style('uce-Styles', get_theme_file_uri('/bundled-assets/styles.530be9de032294d506a9.css'));
 		
 	}
 
