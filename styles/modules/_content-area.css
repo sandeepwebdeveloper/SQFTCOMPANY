@@ -516,6 +516,9 @@ section {
             line-height: 1.8;
             font-weight: 300;
             @mixin atELarge {
+                line-height: 2.1;
+            }
+            @mixin atXlLarge {
                 font-size: 18px;
                 line-height: 2.1;
             }
@@ -570,6 +573,9 @@ section {
             margin-top: 0;
             @mixin atELarge {
                 margin-top: 0;
+                height: 550px;
+            }
+            @mixin atXlLarge {
                 height: 850px;
             }
             img {
@@ -609,15 +615,21 @@ section {
                     padding: 0;
                     li {
                         list-style: none;
-                        font-size: 22px;
+                        font-size: 16px;
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
-                        gap: 60px;
-                        margin: 0 0 30px;
+                        gap: 30px;
+                        margin: 0 0 20px;
                         border-bottom: 1px solid #e7e7e7;
-                        padding-bottom: 30px;
+                        padding-bottom: 20px;
                         font-weight: 100;
+                        @mixin atXlLarge {
+                            gap: 60px;
+                            padding-bottom: 30px;
+                            margin: 0 0 30px;
+                            font-size: 22px;
+                        }
                         span.property-attr-title {
                             width: 25%;
                             flex: 0 0 auto;
