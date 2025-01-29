@@ -9,7 +9,7 @@
                         <div class="swiper-slide">
                             <div class="slider-inner">
                                 <div class="slider-img">
-                                    <img src="/wp-content/uploads/2024/10/pexels-najafi-27854089.jpg" alt=""
+                                    <img src="/wp-content/uploads/2025/01/alex-shutin-uhn-U0sSxFQ-unsplash.jpg" alt=""
                                         class="parallax-image">
                                 </div>
                                 <div class="slide-content">
