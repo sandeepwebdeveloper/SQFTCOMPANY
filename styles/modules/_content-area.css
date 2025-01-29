@@ -63,7 +63,7 @@ section {
             top: 20%;
             left: 0;
             right: 0;
-            z-index: 11;
+            z-index: 1;
             transform: translateY(-50%);
             text-align: center;
             h1 {
@@ -136,7 +136,10 @@ section {
                         height: 300px;
                     }
                     @mixin atXlLarge {
-                        height: 550px;
+                        height: 400px;
+                    }
+                    @mixin atXllLarge {
+                        height: 400px;
                     }
                 }
             }
@@ -318,7 +321,7 @@ section {
                         height: 40px;
                     }
                     @mixin atXlLarge {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
             }
@@ -334,8 +337,8 @@ section {
                         font-size: 14px;
                     }
                     @mixin atXlLarge {
-                        line-height: 30px;
-                        font-size: 16px;
+                        line-height: 24px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -347,6 +350,18 @@ section {
         @mixin atELarge {
             margin-top: 0;
             margin-bottom: 0;
+        }
+        .gallery-heading {
+            h3 {
+                margin-bottom: 30px;
+                font-size: 24px;
+                letter-spacing: 2px;
+                font-weight: 500;
+                @mixin atELarge {
+                    font-size: 35px;
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
     &__site-register {
@@ -472,15 +487,18 @@ section {
     @media (max-width: 768px) {
         .register-action {
             position: fixed;
-            bottom: 0;
+            /* bottom: 0; */
             z-index: 1;
-            left: 0;
+            width: 150px;
             right: 0;
-            width: 100%;
+            transform: rotate(-90deg) translateY(-50%);
+            transform-origin: right center;
+            top: 30%;
             a.btn.btn-primary {
                 width: 100%;
                 font-size: 12px;
                 letter-spacing: 2px;
+                padding: 7px;
             }
         }
     }
@@ -498,8 +516,8 @@ section {
             line-height: 1.8;
             font-weight: 300;
             @mixin atELarge {
-                font-size: 25px;
-                line-height: 2;
+                font-size: 18px;
+                line-height: 2.1;
             }
         }
     }
@@ -579,6 +597,9 @@ section {
         }
         .property-cover {
             padding: 120px 0;
+            @mixin atELarge {
+                padding: 120px 0 0;
+            }
             .property-content {
                 ul {
                     margin: 0;

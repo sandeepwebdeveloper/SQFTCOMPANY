@@ -4,9 +4,9 @@
     <div class="container-fluid px-0">
         <div class="row">
             <div class="col-xl-12">
-                <div class="swiper-container full-slider">
-                    <div class="swiper-wrapper ">
-                        <div class="swiper-slide">
+                <div class="banner-container full-slider">
+                    <div class="banner-wrapper ">
+                        <div class="banner-slide">
                             <div class="slider-inner">
                                 <div class="slider-img">
                                     <img src="/wp-content/uploads/2025/01/alex-shutin-uhn-U0sSxFQ-unsplash.jpg" alt=""

@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="section-heading px-120">
+                <div class="gallery-heading px-120">
                     <h3>View Gallery</h3>
                 </div>
             </div>
@@ -34,7 +34,10 @@
                             endforeach;
                         endif;
                         ?>
+
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
         <button id="load-more-btn" class="load-more" style="display:none;">Load More Images</button>
