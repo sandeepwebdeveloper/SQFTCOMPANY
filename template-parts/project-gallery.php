@@ -23,8 +23,15 @@
                         <div class="gallery-inner">
                             <div class="gallery-cover">
                                 <a href="<?php echo esc_url($image['url']); ?>">
-                                    <img class="gallery-slide-image" src="<?php echo esc_url($image['url']); ?>"
-                                        alt="<?php echo esc_attr($image['alt'] ?? ''); ?>">
+                                    <picture>
+                                        <source srcset="<?php echo esc_url($image['sizes']['gallery-desktop-size']); ?>"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="<?php echo esc_url($image['sizes']['gallery-tablet-size']); ?>"
+                                            media="(min-width: 768px)">
+                                        <img class="gallery-slide-image"
+                                            src="<?php echo esc_url($image['sizes']['gallery-mobile-size']); ?>"
+                                            alt="<?php the_title(); ?>">
+                                    </picture>
                                 </a>
                             </div>
                         </div>

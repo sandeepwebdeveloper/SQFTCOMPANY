@@ -9,8 +9,20 @@
                         <div class="banner-slide">
                             <div class="slider-inner">
                                 <div class="slider-img">
-                                    <img src="/wp-content/uploads/2025/01/alex-shutin-uhn-U0sSxFQ-unsplash.jpg" alt=""
-                                        class="parallax-image">
+                                    <picture>
+                                        <source
+                                            srcset="/wp-content/uploads/2025/01/sqft-realestate-desktop-image-scaled.jpg"
+                                            media="(min-width: 1680px)">
+                                        <source
+                                            srcset="/wp-content/uploads/2025/01/sqft-realestate-sm-desktop-image.jpg"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="/wp-content/uploads/2025/01/sqft-realestate-tablet-image.jpg"
+                                            media="(min-width: 768px)">
+                                        <img src="/wp-content/uploads/2025/01/sqft-realestate-mobile-image.jpg"
+                                            alt="SQFT Company - Realestate - Toronto Mississauga Brampton"
+                                            class="parallax-image">
+                                    </picture>
+
                                 </div>
                                 <div class="slide-content">
                                     <div class="container-fluid px-120">
@@ -95,7 +107,20 @@
                             <div class="project-block-wrap">
                                 <div class="project-block-img">
                                     <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('full', ['alt' => get_the_title()]); ?>
+                                    <picture>
+                                        <source
+                                            srcset="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'project-desktop-size'); ?>"
+                                            media="(min-width: 1680px)">
+                                        <source
+                                            srcset="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'project-desktop-size'); ?>"
+                                            media="(min-width: 1200px)">
+                                        <source
+                                            srcset="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'project-tablet-size'); ?>"
+                                            media="(min-width: 768px)">
+                                        <img src="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'project-mobile-size'); ?>"
+                                            alt="<?php the_title(); ?>">
+                                    </picture>
+
                                     <?php endif; ?>
                                     <div class="project-block-status">
                                         <span><?= esc_html($status) ?></span>

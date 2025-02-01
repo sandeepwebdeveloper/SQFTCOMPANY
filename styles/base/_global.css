@@ -300,10 +300,15 @@ template {
     background: $red;
     border: 1px solid $red;
     border-radius: 0;
-    padding: 10px 50px;
+    padding: 10px 80px;
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 1px;
+    transition: all 0.3s ease-in;
+    &:hover {
+        background: transparent;
+        color: $red;
+    }
 }
 .bg-light-grey {
     @mixin atELarge {
@@ -682,4 +687,10 @@ button#load-more-btn {
         padding-right: 40px; /* Ensures text doesn't overlap with the arrow */
         cursor: pointer;
     }
+}
+.sl-overlay {
+    background: $black !important;
+}
+.sl-navigation button {
+    color: $white !important;
 }

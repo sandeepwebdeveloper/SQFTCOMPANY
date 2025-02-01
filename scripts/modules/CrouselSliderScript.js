@@ -20,11 +20,11 @@ class CrouselSliderScript {
         var swiper = new Swiper('.gallery-swiper', {
             slidesPerView: 'auto',
             spaceBetween: 10,
-            loop: true,
+            loop: false,
             speed: 2000,
             autoplay: {
                 delay: 3000,
-                disableOnInteraction: false
+                disableOnInteraction: true
             },
             navigation: {
                 nextEl: '.swiper-button-next',

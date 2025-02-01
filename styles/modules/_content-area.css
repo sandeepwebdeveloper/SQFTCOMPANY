@@ -7,7 +7,7 @@ section {
         position: relative;
         overflow: hidden;
         @mixin atELarge {
-            height: 100vh;
+            height: calc(100vh - 120px);
         }
         .slide-heading {
             h1 {
@@ -48,9 +48,23 @@ section {
         }
 
         .slider-img {
+            &:before {
+                position: absolute;
+                background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                content: '';
+                z-index: 1;
+            }
             img {
-                height: 650px;
+                height: 60vh;
                 object-fit: cover;
+                object-position: left center;
+
                 @mixin atELarge {
                     object-position: -680px;
                     object-position: center;
@@ -60,7 +74,7 @@ section {
         }
         .slide-content {
             position: absolute;
-            top: 20%;
+            top: 50%;
             left: 0;
             right: 0;
             z-index: 1;
@@ -110,7 +124,7 @@ section {
         }
     }
     &__home-projects {
-        padding: 80px 0 60px;
+        padding: 60px 0 60px;
         position: relative;
         @mixin atELarge {
             padding: 120px 0 60px;
@@ -129,18 +143,10 @@ section {
             &-img {
                 position: relative;
                 img {
-                    height: 450px;
+                    height: 100%;
+                    width: 100%;
                     object-fit: cover;
                     object-position: center;
-                    @mixin atELarge {
-                        height: 300px;
-                    }
-                    @mixin atXlLarge {
-                        height: 400px;
-                    }
-                    @mixin atXllLarge {
-                        height: 400px;
-                    }
                 }
             }
             &-status {
@@ -454,12 +460,10 @@ section {
             }
         }
         button.btn.btn-primary.red-button {
-            background: #ac0010;
             padding: 10px 60px;
             font-size: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border: #ac0010;
             border-radius: 0;
         }
         .form-disclaimer {
@@ -474,6 +478,109 @@ section {
             }
         }
     }
+    &__contact-page {
+        padding: 0 0;
+        .ps-c-120 {
+            padding-left: 0 !important;
+
+            @mixin atELarge {
+                padding-left: 120px;
+            }
+        }
+        .contact-page-text {
+            padding: 35px;
+            @mixin atELarge {
+                padding: 0;
+            }
+            h1 {
+                font-size: 22px;
+                text-transform: uppercase;
+                font-weight: 300;
+                position: relative;
+                @mixin atELarge {
+                    max-width: max-content;
+                    font-size: 62px;
+                    width: 120%;
+                    letter-spacing: 2px;
+                }
+                span {
+                    display: block;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    @mixin atELarge {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .contact-message {
+                position: relative;
+                background: $white;
+                z-index: 1;
+                @mixin atELarge {
+                    padding: 50px;
+
+                    margin-left: 20%;
+                    width: 100%;
+                    max-width: max-content;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                    line-height: 1.6;
+                    z-index: 1;
+                    @mixin atELarge {
+                        font-size: 32px;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        line-height: 1.6;
+                        z-index: 1;
+                    }
+                }
+                .contact-action {
+                    p {
+                        font-size: 18px !important;
+                        span {
+                            display: block;
+                            a {
+                                color: $black;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    ul.social-media {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 10px;
+                        li {
+                            a {
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact-image {
+            position: relative;
+            &:before {
+                position: absolute;
+                content: '';
+                background: rgba(0, 0, 0, 0.53);
+
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
     &__thank-you {
         padding: 120px 0;
     }
@@ -484,12 +591,12 @@ section {
     @mixin atELarge {
         padding: 80px 0 0;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1199px) {
         .register-action {
             position: fixed;
             /* bottom: 0; */
             z-index: 1;
-            width: 150px;
+            width: 120px;
             right: 0;
             transform: rotate(-90deg) translateY(-50%);
             transform-origin: right center;
@@ -525,7 +632,6 @@ section {
         }
     }
     .sigle-banner-title {
-        margin-bottom: 30px;
         h1 {
             font-size: 5.5vw;
             margin: 0;
@@ -588,10 +694,11 @@ section {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            gap: 12px;
+            gap: 10px;
             margin-top: 10px;
             @mixin atELarge {
                 margin-top: 15px;
+                gap: 12px;
             }
             span {
                 font-weight: 700;
@@ -600,7 +707,10 @@ section {
                     font-size: 16px;
                 }
                 img {
-                    width: 20px;
+                    width: 15px;
+                    @mixin atELarge {
+                        width: 20px;
+                    }
                 }
             }
         }

@@ -6,8 +6,8 @@
             <div class="container-fluid px-120 px-m-0">
                 <div class="single-banner-wrapper">
                     <div class="single-banner-block">
-                        <div class="row lign-items-center">
-                            <div class="col-md-10 order-2 order-xl-1">
+                        <div class="row align-items-end">
+                            <div class="col-xl-9 order-2 order-xl-1">
                                 <div class="sigle-banner-title px-m-35">
                                     <h1>
                                         <?php the_title(); 
@@ -28,22 +28,32 @@
                                                 <img src="/wp-content/uploads/2025/01/location.svg"
                                                     alt="Location <?php echo $city; ?>">
                                             </span>
-                                            <span><?php echo $location .', '.$city; ?></span>
+                                            <span><?php echo $location; ?></span>
                                         </div>
 
                                     </h1>
                                 </div>
                             </div>
-                            <div class="col-md-2 order-2 order-xl-2">
-                                <div class="register-action">
-                                    <a class="btn btn-primary" href="#register">Register Now</a>
+                            <div class="col-xl-3 order-2 order-xl-3">
+                                <div class="register-action d-xl-flex ms-xl-auto justify-content-xl-end">
+                                    <a class="btn btn-primary" href="#register">Register</a>
                                 </div>
                             </div>
                             <div class="col-xl-12 order-1 order-xl-3">
-                                <div class="single-banner-image mb-4 mb-xl-0">
-                                    <?php $thumbnail_url = get_the_post_thumbnail_url(get_the_ID()); ?>
-                                    <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>">
+                                <div class="single-banner-image mb-4 mb-xl-0 mt-5">
+                                    <?php 
+                                        // Get the thumbnail URL for different sizes
+                                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); // Full size
+                                        $thumbnail_mobile = get_the_post_thumbnail_url(get_the_ID(), 'custom-mobile'); // Mobile size
+                                        $thumbnail_tablet = get_the_post_thumbnail_url(get_the_ID(), 'custom-tablet'); // Tablet size
+                                    ?>
+                                    <picture>
+                                        <source srcset="<?php echo $thumbnail_url; ?>" media="(min-width: 1200px)">
+                                        <source srcset="<?php echo $thumbnail_tablet; ?>" media="(min-width: 768px)">
+                                        <img src="<?php echo $thumbnail_mobile; ?>" alt="<?php the_title(); ?>">
+                                    </picture>
                                 </div>
+
                             </div>
                         </div>
                         <div class="property-cover d-none d-xl-block">
